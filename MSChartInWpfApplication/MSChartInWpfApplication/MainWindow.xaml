@@ -1,0 +1,21 @@
+﻿<Window x:Class="MSChartInWpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:winformchart="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+    Title="MSChartInWpfApplication" Height="500" Width="800">
+    <StackPanel>
+        <WindowsFormsHost x:Name="host" Height="300">
+            <winformchart:Chart x:Name="MyWinformChart" Dock="Fill">
+                <winformchart:Chart.Series>
+                    <winformchart:Series Name="series" ChartType="Line"/>
+                </winformchart:Chart.Series>
+                <winformchart:Chart.ChartAreas>
+                    <winformchart:ChartArea/>
+                </winformchart:Chart.ChartAreas>
+            </winformchart:Chart>
+        </WindowsFormsHost>
+        <Button Content="Change Data" Click="Button_Click"/>
+        <Button Content="Change Look" Click="Button_Click_1"/>
+        <Button Content="Add Legend" Click="Button_Click_2"/>
+    </StackPanel>
+</Window>
